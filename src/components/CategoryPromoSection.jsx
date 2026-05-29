@@ -23,7 +23,7 @@ export default function CategoryPromoSection() {
               </p>
             </div>
 
-            {/* Precision Contained Image Viewport with Hover Zoom Effect */}
+            
                        <div className="absolute right-2 bottom-4 w-[100%] h-[100%] flex items-end justify-center overflow-hidden">
               <img 
                 src="https://miniture-demo.myshopify.com/cdn/shop/files/m2_collection_01.jpg?v=1777043011&width=1200" 
@@ -31,8 +31,6 @@ export default function CategoryPromoSection() {
                 className="max-w-full max-h-full object-contain transform transition-transform duration-500 ease-out group-hover:scale-110"
               />
             </div>
-
-            {/* Bottom-Left Inner Cutout Notch & Button */}
             <div className="absolute left-0 bottom-0 bg-white pt-4 pr-4 rounded-tr-[24px] z-10">
               <button className="flex items-center gap-2 px-6 py-3.5 bg-[#FFAE34] text-white font-medium text-[13px] rounded-full transition-colors duration-300 hover:bg-black shadow-sm group/btn">
                 <span>Shop now</span>
@@ -40,8 +38,6 @@ export default function CategoryPromoSection() {
               </button>
             </div>
           </div>
-
-          {/* Card 2: Accent Chair */}
           <div className="group relative bg-[#E5DAD9] rounded-[24px] p-8 md:p-10 h-[280px] flex flex-col justify-between overflow-hidden shadow-sm">
             <div className="max-w-[55%] z-10 pointer-events-none">
               <span className="block text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-2">
@@ -62,8 +58,6 @@ export default function CategoryPromoSection() {
                 className="max-w-full max-h-full object-contain transform transition-transform duration-500 ease-out group-hover:scale-110"
               />
             </div>
-
-            {/* Bottom-Left Inner Cutout Notch & Button */}
             <div className="absolute left-0 bottom-0 bg-white pt-4 pr-4 rounded-tr-[24px] z-10">
               <button className="flex items-center gap-2 px-6 py-3.5 bg-[#FFAE34] text-white font-medium text-[13px] rounded-full transition-colors duration-300 hover:bg-black shadow-sm group/btn">
                 <span>Shop now</span>
@@ -73,13 +67,8 @@ export default function CategoryPromoSection() {
           </div>
 
         </div>
-
-        {/* ========================================== */}
-        {/* RIGHT COLUMN: SINGLE TALL FEATURE CARD     */}
-        {/* ========================================== */}
         <div className="group relative bg-[#F0EFF1] rounded-[24px] p-8 md:p-10 flex flex-col justify-between overflow-hidden shadow-sm min-h-[584px] lg:min-h-full">
           
-          {/* Top text content box */}
           <div className="max-w-[65%] z-10 pointer-events-none">
             <span className="block text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-2">
               CEILING LIGHTING
@@ -92,7 +81,6 @@ export default function CategoryPromoSection() {
             </p>
           </div>
 
-          {/* Large Right-Aligned Feature Image with Smooth Scale Zoom on Card Hover */}
           <div className="absolute right-0 bottom-0 w-[100%] h-[100%] overflow-hidden rounded-tl-[24px]">
             <img 
               src="https://miniture-demo.myshopify.com/cdn/shop/files/m2_collection_03.jpg?v=1777043012&width=1200" 
@@ -101,7 +89,6 @@ export default function CategoryPromoSection() {
             />
           </div>
 
-          {/* Bottom-Left Inner Cutout Notch & Button */}
           <div className="absolute left-0 bottom-0 bg-white pt-4 pr-4 rounded-tr-[24px] z-10">
             <button className="flex items-center gap-2 px-6 py-3.5 bg-[#FFAE34] text-white font-medium text-[13px] rounded-full transition-colors duration-300 hover:bg-black shadow-sm group/btn">
               <span>Shop now</span>

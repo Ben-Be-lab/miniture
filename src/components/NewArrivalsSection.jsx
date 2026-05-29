@@ -2,7 +2,6 @@ import React from 'react';
 import { Star } from 'lucide-react';
 
 export default function NewArrivalsSection() {
-  // Your exact Shopify demo store image links
   const products = [
     {
       id: 1,
@@ -45,47 +44,33 @@ export default function NewArrivalsSection() {
 
   return (
     <section className="w-full  bg-white select-none">
-      {/* Aligns layout perfectly with upper sections */}
       <div className="w-full  mx-auto">
-        
-        {/* Section Title */}
+
         <div className="w-full text-center mb-8">
           <h2 className="text-[24px] md:text-[28px] font-bold text-black tracking-tight">
             New Arrivals
           </h2>
         </div>
-
-        {/* 4-Column Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <div key={product.id} className="group flex flex-col cursor-pointer">
-              
-              {/* Card Container Frame: Removed bg-[#F5F5F7] and padding so photo fills completely */}
               <div className="relative w-full aspect-square rounded-[24px] overflow-hidden mb-3 shadow-sm border border-gray-100">
-                
-                {/* Image 1: Default View - Using object-cover to extend edge-to-edge */}
                 <img
                   src={product.imgUrl}
                   alt={product.name}
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                 />
-
-                {/* Image 2: Hover Zoom View - Using object-cover to extend edge-to-edge */}
                 <img
                   src={product.hoverImgUrl}
                   alt={`${product.name} alternate view`}
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out opacity-0 scale-100 group-hover:opacity-100 group-hover:scale-105"
                 />
-
-                {/* Rating Star Badge */}
                 {product.rating && (
                   <div className="absolute top-4 left-4 z-10 bg-white px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm border border-gray-100">
                     <Star size={11} className="fill-[#FFAE34] text-[#FFAE34]" />
                     <span className="text-[11px] font-bold text-gray-800">{product.rating}</span>
                   </div>
                 )}
-
-                {/* Promo Red Badge */}
                 {product.badge && (
                   <div className="absolute top-4 left-4 z-10 bg-[#E24C4C] px-3 py-1 rounded-full shadow-sm">
                     <span className="text-[10px] font-bold text-white tracking-wide uppercase">
@@ -94,8 +79,6 @@ export default function NewArrivalsSection() {
                   </div>
                 )}
               </div>
-
-              {/* Text Information Block */}
               <div className="flex flex-col px-1">
                 <h3 className="text-[14px] font-semibold text-gray-800 group-hover:text-black transition-colors line-clamp-1 mb-1">
                   {product.name}

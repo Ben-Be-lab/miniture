@@ -30,21 +30,20 @@ export default function FeaturesBannerSection() {
   ];
 
   return (
-    /* Keeps alignment perfectly standard with the rest of your home page layout containers */
+    
     <section className="w-full px-4 md:px-10 py-12 bg-white select-none">
       <div className="w-full  mx-auto">
         
-        {/* Responsive Flex / Grid Columns row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6">
           {features.map((item) => (
             <div key={item.id} className="flex items-center gap-4 pl-2 lg:pl-4">
               
-              {/* Thin Outlined Circular Icon Frame */}
+              
               <div className="flex-shrink-0 w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center bg-transparent">
                 {item.icon}
               </div>
 
-              {/* Text Description Block */}
+            
               <div className="flex flex-col">
                 <h4 className="text-[24px] font-200px text-black tracking-tight leading-tight mb-1">
                   {item.title}

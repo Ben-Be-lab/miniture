@@ -53,8 +53,7 @@ export default function HeroSection() {
         style={{ backgroundImage: `url('${slides[currentIdx].bgImage}')` }}
       >
         <div className="absolute inset-0 bg-black/5 pointer-events-none" />
-        
-        {/* Navigation Arrows */}
+
         <button 
           onClick={prevSlide}
           className="absolute left-6 z-20 w-12 h-12 rounded-full bg-white flex items-center justify-center text-black shadow-md hover:text-[#FFAE34] transition-all duration-200 active:scale-90" 
@@ -68,8 +67,6 @@ export default function HeroSection() {
         >
           <ArrowRight size={18} />
         </button>
-
-        {/* Slide Content */}
         <div className="w-full mx-auto px-20 md:px-32 z-10 select-none">
           <div className={`max-w-[500px] transform transition-all duration-500 ease-out ${
             isAnimating ? 'opacity-0 translate-y-8' : 'opacity-100 translate-y-0'
@@ -88,8 +85,6 @@ export default function HeroSection() {
             </button>
           </div>
         </div>
-
-        {/* Indicators */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center space-x-2.5 z-20">
           {slides.map((_, idx) => (
             <span

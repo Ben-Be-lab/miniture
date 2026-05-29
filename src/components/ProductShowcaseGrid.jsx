@@ -2,9 +2,7 @@ import React from 'react';
 import { Star, Search, Maximize2, ShoppingBag } from 'lucide-react';
 
 export default function ProductShowcaseGrid() {
-  // Your exact product data array with live image URLs and routing paths
   const products = [
-    // ROW 1: Chairs & Sofas
     {
       id: 1,
       name: "Ana Grey Dining Chair",
@@ -46,7 +44,6 @@ export default function ProductShowcaseGrid() {
       rating: null,
       badge: "Save 19%"
     },
-    // ROW 2: Kids Furniture & Lounges
     {
       id: 5,
       name: "Dot Kids Light Brown Play Stool",
@@ -92,52 +89,36 @@ export default function ProductShowcaseGrid() {
 
   return (
     <section className="w-full px-4 md:px-10 py-10 bg-white select-none">
-      {/* Container max-width locks alignment with the rest of your page */}
       <div className="w-full  mx-auto">
-        
-        {/* Section Heading Title */}
         <div className="w-full text-center mb-10">
           <h2 className="text-[24px] md:text-[28px] font-bold text-black tracking-tight">
             Our Products
           </h2>
         </div>
-
-        {/* 4-Column Balanced Grid Frame */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
           {products.map((product) => (
-            /* Wrapped entire card component in an active clickable link block */
             <a 
               key={product.id} 
               href={product.link}
               className="group flex flex-col w-full no-underline"
             >
-              
-              {/* Product Card Container Frame */}
               <div className="relative w-full aspect-square bg-[#F5F5F7] rounded-[24px] overflow-hidden mb-4 shadow-xs">
-                
-                {/* Image 1: Default View (Using object-cover to display the original environment) */}
                 <img
                   src={product.imgUrl}
                   alt={product.name}
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                 />
-
-                {/* Image 2: Alternate View (Fades in seamlessly on card hover) */}
                 <img
                   src={product.hoverImgUrl}
                   alt={`${product.name} alternate view`}
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out opacity-0 scale-100 group-hover:opacity-100 group-hover:scale-105"
                 />
-
-                {/* Rating Badge Overlay */}
                 {product.rating && (
                   <div className="absolute top-4 left-4 z-10 bg-white px-2.5 py-1 rounded-full flex items-center gap-1 shadow-xs border border-gray-100">
                     <Star size={11} className="fill-[#FFAE34] text-[#FFAE34]" />
                     <span className="text-[11px] font-bold text-gray-800">{product.rating}</span>
                   </div>
                 )}
-
-                {/* Promotional Red Discount Tag Overlay */}
                 {product.badge && (
                   <div className="absolute top-4 left-4 z-10 bg-[#E24C4C] px-3 py-1 rounded-full shadow-xs">
                     <span className="text-[10px] font-bold text-white tracking-wide">
@@ -145,15 +126,9 @@ export default function ProductShowcaseGrid() {
                     </span>
                   </div>
                 )}
-
-                {/* ========================================== */}
-                {/* INTERACTIVE HOVER OVERLAY TOOLBARS         */}
-                {/* ========================================== */}
-                
-                {/* Right Actions Bar: Fades and slides left on hover */}
                 <div className="absolute right-4 top-1/4 flex flex-col gap-2 opacity-0 translate-x-4 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-x-0 z-20">
                   <button 
-                    onClick={(e) => { e.preventDefault(); }} // Prevents page transition when clicking utility buttons
+                    onClick={(e) => { e.preventDefault(); }}
                     className="p-2.5 bg-white hover:bg-black text-gray-700 hover:text-white rounded-full shadow-sm transition-colors duration-200"
                   >
                     <Search size={16} />
@@ -165,8 +140,6 @@ export default function ProductShowcaseGrid() {
                     <Maximize2 size={16} />
                   </button>
                 </div>
-
-                {/* Bottom Right Shopping Bag Quick-Add Button */}
                 <div className="absolute right-4 bottom-4 opacity-0 translate-y-3 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-0 z-20">
                   <button 
                     onClick={(e) => { e.preventDefault(); }}
@@ -177,8 +150,6 @@ export default function ProductShowcaseGrid() {
                 </div>
 
               </div>
-
-              {/* Text Description Footer Block */}
               <div className="flex flex-col px-1">
                 <h3 className="text-[14px] font-medium text-gray-800 group-hover:text-black transition-colors line-clamp-1 mb-1.5">
                   {product.name}

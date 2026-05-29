@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function ExclusiveBrandsSection() {
-  // Purely text data strings—no links, no routing paths
   const brands = [
     { id: 1, name: "PRADA", style: "font-serif tracking-[0.2em] font-bold text-[32px]" },
     { id: 2, name: "BURBERRY", style: "font-sans tracking-[0.15em] font-bold text-[30px]" },
@@ -13,15 +12,11 @@ export default function ExclusiveBrandsSection() {
   return (
     <section className="w-full px-4 md:px-10 py-16 bg-white select-none">
       <div className="w-full  mx-auto">
-        
-        {/* Main Section Heading Title */}
         <div className="w-full text-center mb-14">
           <h2 className="text-[24px] md:text-[28px] font-bold text-black tracking-tight">
             Explore our Exclusive Brands
           </h2>
         </div>
-
-        {/* Static Horizontal Text Row (No cursor pointers, no links) */}
         <div className="flex flex-wrap items-center justify-center lg:justify-between justify-space-between px-50 pointer-events-none ">
           {brands.map((brand) => (
             <div 

@@ -38,15 +38,11 @@ export default function ShopByCategoriesSection() {
     
     <section className="w-full px-4 md:px-10 py-12 bg-white select-none">
       <div className="w-full  mx-auto">
-        
-        {/* Section Heading Title */}
         <div className="w-full text-center mb-10">
           <h2 className="text-[24px] md:text-[28px] font-bold text-black tracking-tight">
             Shop by Categories
           </h2>
         </div>
-
-        {/* 5-Column Flex/Grid Row */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 justify-center items-center">
           {categories.map((cat) => (
             <div key={cat.id} className="group flex flex-col items-center text-center cursor-pointer">
@@ -60,8 +56,6 @@ export default function ShopByCategoriesSection() {
                   className="w-full h-full object-cover transform transition-transform duration-700 ease-out scale-100 group-hover:scale-110"
                 />
               </div>
-
-              {/* Category Typography Metadata */}
               <div className="flex flex-col items-center">
                 <h3 className="text-[15px] font-bold text-black group-hover:text-[#FFAE34] transition-colors duration-200 mb-0.5">
                   {cat.name}
