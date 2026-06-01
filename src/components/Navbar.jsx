@@ -23,12 +23,12 @@ export default function Navbar() {
               </a>
               <div className="absolute left-0 top-full hidden group-hover:flex flex-col bg-white min-w-[260px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] rounded-b-[24px] overflow-hidden pt-4 pb-6 px-6 z-50 border-t border-gray-50">
                 <div className="flex flex-col space-y-4">
-                  <a href="#" className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline">Home v1 — Modern Elegance</a>
-                  <a href="#" className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline">Home v2 — Rustic Comfort</a>
-                  <a href="#" className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline">Home v3 — Minimalist Chic</a>
-                  <a href="#" className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline">Home v4 — Industrial Vibes</a>
-                  <a href="#" className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline">Home v5 — Vintage Revival</a>
-                  <a href="#" className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline">Home v6 — Kid’s Playland</a>
+                  <span className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline cursor-pointer">Home v1 — Modern Elegance</span>
+                  <span className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline cursor-pointer">Home v2 — Rustic Comfort</span>
+                  <span className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline cursor-pointer">Home v3 — Minimalist Chic</span>
+                  <span className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline cursor-pointer">Home v4 — Industrial Vibes</span>
+                  <span className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline cursor-pointer">Home v5 — Vintage Revival</span>
+                  <span className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline cursor-pointer">Home v6 — Kid’s Playland</span>
                 </div>
               </div>
             </div>
