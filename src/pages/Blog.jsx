@@ -1,5 +1,5 @@
 import BlogGrid from "../components/BlogGrid";
-import BlogHero from "../components/blogHero";
+import BlogHero from "../components/BlogHero";
 
 
 function Blog() {
