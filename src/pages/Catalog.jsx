@@ -1,16 +1,18 @@
+import React from "react";
+import CatalogHero from "../components/CatalogueHero"; // Kept your exact file spelling
+import CatalogToolbar from "../components/CatalogToolbar"; // 🌟 Fixed: changed capital 'B' to lowercase 'b'
 import CatalogContent from "../components/CatalogContent";
-import CatalogToolbar from "../components/CatalogToolBar";
-import CatalogHero from "../components/CatalogueHero";
 
-function Catalogue() {
+// 🌟 Fixed: Changed function name from 'Catalogue' to 'Catalog' to match your filename
+function Catalog() {
   return (
-  <>
-<CatalogHero />
-<CatalogToolbar />
-<CatalogContent />
-
-  </>
+    <>
+      <CatalogHero />
+      <CatalogToolbar />
+      <CatalogContent />
+    </>
   );
 }
 
-export default Catalogue;
+// 🌟 Fixed: Exporting the clean matching name
+export default Catalog;
