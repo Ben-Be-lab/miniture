@@ -1,13 +1,14 @@
 import React from "react";
-import CatalogHero from "../components/CatalogueHero"; // Kept your exact file spelling
+
 import CatalogToolbar from "../components/CatalogToolbar"; // 🌟 Fixed: changed capital 'B' to lowercase 'b'
 import CatalogContent from "../components/CatalogContent";
+import CatalogHero from "../components/CatalogHero";
 
 // 🌟 Fixed: Changed function name from 'Catalogue' to 'Catalog' to match your filename
 function Catalog() {
   return (
     <>
-      <CatalogHero />
+    <CatalogHero />
       <CatalogToolbar />
       <CatalogContent />
     </>

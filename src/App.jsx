@@ -2,7 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Layout from "./components/Layout"
 import Home from "./pages/Home"
 import Blog from "./pages/Blog"
-import Catalog from './pages/Catalog';
+import Catalog from "./pages/Catalog"
+
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         
           <Route index element={<Home />} />
           <Route path="/Blog" element={<Blog />} />
-          <Route path="/catalog" element={<Catalogue />} />
+          <Route path="/catalog" element={<Catalog />} />
         </Route>
       </Routes>
     </BrowserRouter>
