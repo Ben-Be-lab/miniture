@@ -5,8 +5,6 @@ export default function CatalogContent() {
   const [inStockOnly, setInStockOnly] = useState(false);
   const [priceMax, setPriceMax] = useState(440);
   const [selectedColor, setSelectedColor] = useState(null);
-  
-  // Accordion toggle states
   const [priceOpen, setPriceOpen] = useState(true);
   const [colorOpen, setColorOpen] = useState(true);
   const [cornerOpen, setCornerOpen] = useState(true);
@@ -120,7 +118,7 @@ export default function CatalogContent() {
       <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-12 items-start relative px-9">
         <aside className="w-full lg:w-[280px] flex flex-col bg-white lg:sticky lg:top-[120px] max-h-[calc(100vh-160px)] overflow-y-auto pr-2 scrollbar-none text-left z-20">
           
-          {/* Stock Toggle Filter */}
+          
           <div className="flex items-center justify-between pb-6 border-b border-gray-100 mb-6">
             <span className="text-[15px] font-bold text-black">In stock only</span>
             <button 

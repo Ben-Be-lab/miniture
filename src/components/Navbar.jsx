@@ -11,7 +11,7 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 w-full bg-white px-9 py-8 z-40">
         <div className="w-full grid grid-cols-3 items-center mx-auto relative">
           <div className="flex justify-start">
-            <a href="/Home" className="text-[31px] font-bold tracking-[-0.05em] text-black leading-none select-none no-underline">
+            <a href="/" className="text-[31px] font-bold tracking-[-0.05em] text-black leading-none select-none no-underline">
               miniture
             </a>
           </div>
@@ -105,9 +105,9 @@ export default function Navbar() {
               </a>
               <div className="absolute left-0 top-full hidden group-hover:flex flex-col bg-white min-w-[180px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] rounded-b-[20px] pt-4 pb-6 px-6 z-50 border-t border-gray-50">
                 <div className="flex flex-col space-y-4 text-left">
-                  <a href="#" className="text-[16px] text-black font-bold hover:text-[#FFAE34] transition-colors no-underline">About Us</a>
-                  <a href="#" className="text-[16px] text-black font-bold hover:text-[#FFAE34] transition-colors no-underline">FAQs</a>
-                  <a href="#" className="text-[16px] text-black font-bold hover:text-[#FFAE34] transition-colors no-underline">Contact Us</a>
+                  <a href="/About-Us" className="text-[16px] text-black font-bold hover:text-[#FFAE34] transition-colors no-underline">About Us</a>
+                  <a href="/FAQs" className="text-[16px] text-black font-bold hover:text-[#FFAE34] transition-colors no-underline">FAQs</a>
+                  <a href="/Contact" className="text-[16px] text-black font-bold hover:text-[#FFAE34] transition-colors no-underline">Contact Us</a>
                 </div>
               </div>
             </div>

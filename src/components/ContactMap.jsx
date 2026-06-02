@@ -3,8 +3,6 @@ import { MapContainer, TileLayer, Marker, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 
 import 'leaflet/dist/leaflet.css';
-
-// Custom clean dark marker pin icon layout styling
 const customMarkerIcon = new L.Icon({
   iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', 
   iconSize: [40, 40],
@@ -13,10 +11,7 @@ const customMarkerIcon = new L.Icon({
 });
 
 export default function ContactMap() {
-  // Exact spatial coordinates matching 620 King St W from your screenshot
   const position = [43.6443, -79.4015]; 
-
-  // The actual functional Google Maps URL targeting your exact screenshot location
   const googleMapsUrl = "https://www.google.com/maps/place/620+King+St+W,+Toronto,+ON+M5V+1M6,+Canada/@43.6443,-79.4015,17z";
 
   const handleMarkerClick = () => {
@@ -31,10 +26,10 @@ export default function ContactMap() {
           center={position} 
           zoom={16} 
           scrollWheelZoom={false}
-          dragging={false}         // 🔒 Map position is locked static (cannot be dragged)
-          doubleClickZoom={false}  // 🔒 Disables zoom on double click
-          zoomControl={false}      // 🔒 Removes the interactive +/- buttons
-          className="w-full h-full z-0 cursor-grab active:cursor-grabbing" // 🖐️ Changes mouse to hand cursor on hover/click
+          dragging={false}         
+          doubleClickZoom={false}  
+          zoomControl={false}     
+          className="w-full h-full z-0 cursor-grab active:cursor-grabbing" 
         >
           <TileLayer
             attribution='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -45,16 +40,14 @@ export default function ContactMap() {
             position={position} 
             icon={customMarkerIcon}
             eventHandlers={{
-              click: handleMarkerClick, // Opens your Google Maps link when clicked
+              click: handleMarkerClick, 
             }}
           >
             <Tooltip direction="top" offset={[0, -35]} opacity={1} permanent={false}>
-              {/* Optional tooltip label can go here */}
+
             </Tooltip>
           </Marker>
         </MapContainer>
-
-        {/* 🏷️ Google Badge Overlay - Snapped directly to the bottom-left start of the active map view */}
         <a 
           href={googleMapsUrl}
           target="_blank"
