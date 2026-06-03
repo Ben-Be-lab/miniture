@@ -14,6 +14,4 @@ function Catalog() {
     </>
   );
 }
-
-// 🌟 Fixed: Exporting the clean matching name
 export default Catalog;
