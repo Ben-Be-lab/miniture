@@ -23,7 +23,7 @@ export default function Header({ sidebarOpen, setSidebarOpen }) {
           <input 
             type="text" 
             placeholder="Search or type command..." 
-            className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg pl-11 pr-14 py-2.5 text-sm text-black placeholder-[#64748B] outline-none focus:border-[#3C50E0] transition-colors"
+            className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg pl-11 pr-14 py-2.5 text-sm text-black placeholder-[#64748B] outline-none focus:border-[#FFAE34] transition-colors"
           />
           <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-0.5 bg-white border border-[#E2E8F0] px-1.5 py-0.5 rounded-md text-[10px] font-medium text-[#94A3B8] shadow-2xs select-none">
             <span>⌘</span><span>K</span>
@@ -33,11 +33,11 @@ export default function Header({ sidebarOpen, setSidebarOpen }) {
 
       {/* 👤 RIGHT SIDE: UTILITY CONTROLS & PROFILE */}
       <div className="flex items-center gap-5">
-        <button className="w-10 h-10 flex items-center justify-center text-[#64748B] hover:text-[#3C50E0] bg-[#F1F5F9] rounded-full transition-colors cursor-pointer">
+        <button className="w-10 h-10 flex items-center justify-center bg-white border border-[#E2E8F0] text-[#64748B] hover:bg-[#E2E8F0]  rounded-full transition-colors cursor-pointer">
           <Moon size={20} strokeWidth={1.8} />
         </button>
 
-        <button className="w-10 h-10 flex items-center justify-center text-[#64748B] hover:text-[#3C50E0] bg-[#F1F5F9] rounded-full transition-colors relative cursor-pointer">
+        <button className="w-10 h-10 flex items-center justify-center text-[#64748B] hover:bg-[#E2E8F0] bg-white border border-[#E2E8F0] rounded-full transition-colors relative cursor-pointer">
           <Bell size={20} strokeWidth={1.8} />
           <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-[#D34053] rounded-full ring-2 ring-white"></span>
         </button>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Search, User, ShoppingBag, X, Star, ArrowRight, Eye, EyeOff, LogOut } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 export default function Navbar() {
   const [activeModal, setActiveModal] = useState(null);
@@ -105,17 +107,17 @@ const handleAuthSubmit = async (e) => {
       <header className="fixed top-0 left-0 w-full bg-white px-9 py-8 z-40">
         <div className="w-full grid grid-cols-3 items-center mx-auto relative">
           <div className="flex justify-start">
-            <a href="/" className="text-[31px] font-bold tracking-[-0.05em] text-black leading-none select-none no-underline">
+            <Link to="/" className="text-[31px] font-bold tracking-[-0.05em] text-black leading-none select-none no-underline">
               miniture
-            </a>
+            </Link>
           </div>
           
           <nav className="hidden md:flex items-center justify-center space-x-[29px]">
             <div className="group relative py-2">
-              <a href="/" className="flex items-center gap-1 text-[15px] font-medium text-black no-underline transition-colors hover:text-[#FFAE34]">
+              <Link to="/" className="flex items-center gap-1 text-[15px] font-medium text-black no-underline transition-colors hover:text-[#FFAE34]">
                 <span>Home</span>
                 <ChevronDown size={14} className="text-black mt-[3px] transition-colors group-hover:text-[#FFAE34]" strokeWidth={2.5} />
-              </a>
+              </Link>
               <div className="absolute left-0 top-full hidden group-hover:flex flex-col bg-white min-w-[260px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] rounded-b-[24px] overflow-hidden pt-4 pb-6 px-6 z-50 border-t border-gray-50">
                 <div className="flex flex-col space-y-4">
                   <span className="text-[15px] text-gray-800 font-medium hover:text-[#FFAE34] transition-colors no-underline cursor-pointer">Home v1 — Modern Elegance</span>
@@ -126,10 +128,10 @@ const handleAuthSubmit = async (e) => {
             </div>
             
             <div className="group py-2">
-              <a href="/catalog" className="flex items-center gap-1 text-[15px] font-medium text-black no-underline transition-colors hover:text-[#FFAE34]">
+              <Link to="/catalog" className="flex items-center gap-1 text-[15px] font-medium text-black no-underline transition-colors hover:text-[#FFAE34]">
                 <span>Catalog</span>
                 <ChevronDown size={14} className="text-black mt-[3px] transition-colors group-hover:text-[#FFAE34]" strokeWidth={2.5} />
-              </a>
+              </Link>
               <div className="absolute left-0 right-0 top-full hidden group-hover:grid grid-cols-[220px_1fr] bg-white w-full shadow-[0_15px_40px_rgba(0,0,0,0.08)] rounded-[24px] p-8 mt-1 gap-8 z-50 border border-gray-100">
                 <div className="flex flex-col justify-between border-r border-gray-100 pr-6 text-left">
                   <div className="flex flex-col space-y-4">
@@ -156,8 +158,8 @@ const handleAuthSubmit = async (e) => {
               </div>
             </div>
 
-            <a href="/Blog" className="text-[15px] font-medium text-black no-underline transition-colors hover:text-[#FFAE34]">Blog</a>
-            <a href="/Contact" className="text-[15px] font-medium text-black no-underline transition-colors hover:text-[#FFAE34]">Contact</a>
+            <Link to="/Blog" className="text-[15px] font-medium text-black no-underline transition-colors hover:text-[#FFAE34]">Blog</Link>
+            <Link to="/Contact" className="text-[15px] font-medium text-black no-underline transition-colors hover:text-[#FFAE34]">Contact</Link>
           </nav>
           
           <div className="flex items-center justify-end space-x-[22px] text-black">
@@ -165,16 +167,25 @@ const handleAuthSubmit = async (e) => {
               <Search size={21} strokeWidth={1.5} />
             </button>
             
-            {/* 🌟 DYNAMIC ACCOUNT TRIGGER BUTTON / SIGN OUT ACTION */}
             {currentUser ? (
-              <button 
-                onClick={handleLogout} 
-                className="flex items-center gap-1.5 transition-colors text-red-500 hover:text-red-600 p-1 cursor-pointer font-medium text-[14px]" 
-                aria-label="Sign Out"
-              >
-                <LogOut size={19} strokeWidth={1.8} />
-                <span className="hidden lg:inline">Sign Out</span>
-              </button>
+              <div className="flex items-center gap-4">
+                {(currentUser?.userRole || currentUser?.role)?.toLowerCase() === 'admin' && (
+                  <Link 
+                    to="/admin/dashboard" 
+                    className="text-[14px] font-bold text-black no-underline hover:text-[#FFAE34] transition-colors mr-2"
+                  >
+                    Dashboard
+                  </Link>
+                )}
+                <button 
+                  onClick={handleLogout} 
+                  className="flex items-center gap-1.5 transition-colors text-red-500 hover:text-red-600 p-1 cursor-pointer font-medium text-[14px]" 
+                  aria-label="Sign Out"
+                >
+                  <LogOut size={19} strokeWidth={1.8} />
+                  <span className="hidden lg:inline">Sign Out</span>
+                </button>
+              </div>
             ) : (
               <button 
                 onClick={() => setActiveModal('account')} 
